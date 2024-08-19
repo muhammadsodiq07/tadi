@@ -18,7 +18,8 @@ const AuthLogin: React.FC = () => {
 
     try {
       const response = await authPost({ username, password });
-      login(response.token, response.refreshToken);
+      const { token, refreshToken } = response;
+      login(token, refreshToken, response);
       navigate("/");
     } catch (error) {
       setError("Invalid email or password.");

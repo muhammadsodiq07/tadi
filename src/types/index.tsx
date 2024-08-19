@@ -33,3 +33,8 @@ export type Turniket_StatusType = {
   status: string;
   color: string;
 };
+
+export interface AuthCredentials {
+  username: string;
+  password: string;
+}
